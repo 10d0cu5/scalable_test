@@ -1,0 +1,1866 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Scalable Capital KPIs</title>
+</head>
+<body>
+<script src="https://d3js.org/d3.v5.min.js"></script>
+<div> <h3>The CEO asks you to provide them with a management report containing the most important metrics that you can distill from the dataset. </br> The desired output is a table showing how these metrics develop over time. </br> </br> Consider what the most important metrics are and generate the report using sql queries or a python script. </h3> </div>
+<div> <h4> Reasoning: </h4> </br> To see how many users there are, how many of them are daily active users and what are the general activity patterns </br>on the platform. This helps to extract improvements on the platform and also scale the infrastructure to the demands </br>for example when there are heavy load hours throughout a day. Also it helps to find out the ratio active users and </br>in what timespan vs overall userbase and analyzing on how to increase that number. </div>
+<h4>Amount of Users</h4>
+<p>202</p>
+<h4>Tracks played</h4>
+<p>333034</p>
+<h4>Most active users</h4>
+<table>
+    <thead>
+    <th>User ID</th>
+    <th>User Name</th>
+    <th>Activity Count</th>
+    </thead>
+    <tbody>
+    
+    <tr>
+        <td>10</td>
+        <td>hds</td>
+        <td>46885</td>
+    </tr>
+    
+    <tr>
+        <td>147</td>
+        <td>Groschi</td>
+        <td>14959</td>
+    </tr>
+    
+    <tr>
+        <td>38</td>
+        <td>Silent Singer</td>
+        <td>13005</td>
+    </tr>
+    
+    <tr>
+        <td>89</td>
+        <td>phdnk</td>
+        <td>12861</td>
+    </tr>
+    
+    <tr>
+        <td>48</td>
+        <td>6d6f7274686f6e</td>
+        <td>11544</td>
+    </tr>
+    
+    <tr>
+        <td>46</td>
+        <td>reverbel</td>
+        <td>8398</td>
+    </tr>
+    
+    <tr>
+        <td>42</td>
+        <td>Cl�psHydra</td>
+        <td>8318</td>
+    </tr>
+    
+    <tr>
+        <td>170</td>
+        <td>InvincibleAsia</td>
+        <td>7804</td>
+    </tr>
+    
+    <tr>
+        <td>190</td>
+        <td>cimualte</td>
+        <td>7356</td>
+    </tr>
+    
+    <tr>
+        <td>37</td>
+        <td>inhji</td>
+        <td>6349</td>
+    </tr>
+    
+    </tbody>
+</table>
+<h4>Daily active users</h4>
+<table>
+    <thead>
+    <th>Timestamp</th>
+    <th>Activity</th>
+
+    </thead>
+    <tbody>
+    
+    <tr>
+        <td>2019-01-01</td>
+        <td>72</td>
+    </tr>
+    
+    <tr>
+        <td>2019-01-02</td>
+        <td>78</td>
+    </tr>
+    
+    <tr>
+        <td>2019-01-03</td>
+        <td>82</td>
+    </tr>
+    
+    <tr>
+        <td>2019-01-04</td>
+        <td>82</td>
+    </tr>
+    
+    <tr>
+        <td>2019-01-05</td>
+        <td>71</td>
+    </tr>
+    
+    <tr>
+        <td>2019-01-06</td>
+        <td>70</td>
+    </tr>
+    
+    <tr>
+        <td>2019-01-07</td>
+        <td>80</td>
+    </tr>
+    
+    <tr>
+        <td>2019-01-08</td>
+        <td>80</td>
+    </tr>
+    
+    <tr>
+        <td>2019-01-09</td>
+        <td>87</td>
+    </tr>
+    
+    <tr>
+        <td>2019-01-10</td>
+        <td>90</td>
+    </tr>
+    
+    <tr>
+        <td>2019-01-11</td>
+        <td>82</td>
+    </tr>
+    
+    <tr>
+        <td>2019-01-12</td>
+        <td>70</td>
+    </tr>
+    
+    <tr>
+        <td>2019-01-13</td>
+        <td>75</td>
+    </tr>
+    
+    <tr>
+        <td>2019-01-14</td>
+        <td>96</td>
+    </tr>
+    
+    <tr>
+        <td>2019-01-15</td>
+        <td>87</td>
+    </tr>
+    
+    <tr>
+        <td>2019-01-16</td>
+        <td>87</td>
+    </tr>
+    
+    <tr>
+        <td>2019-01-17</td>
+        <td>88</td>
+    </tr>
+    
+    <tr>
+        <td>2019-01-18</td>
+        <td>88</td>
+    </tr>
+    
+    <tr>
+        <td>2019-01-19</td>
+        <td>75</td>
+    </tr>
+    
+    <tr>
+        <td>2019-01-20</td>
+        <td>63</td>
+    </tr>
+    
+    <tr>
+        <td>2019-01-21</td>
+        <td>81</td>
+    </tr>
+    
+    <tr>
+        <td>2019-01-22</td>
+        <td>82</td>
+    </tr>
+    
+    <tr>
+        <td>2019-01-23</td>
+        <td>87</td>
+    </tr>
+    
+    <tr>
+        <td>2019-01-24</td>
+        <td>93</td>
+    </tr>
+    
+    <tr>
+        <td>2019-01-25</td>
+        <td>79</td>
+    </tr>
+    
+    <tr>
+        <td>2019-01-26</td>
+        <td>66</td>
+    </tr>
+    
+    <tr>
+        <td>2019-01-27</td>
+        <td>66</td>
+    </tr>
+    
+    <tr>
+        <td>2019-01-28</td>
+        <td>81</td>
+    </tr>
+    
+    <tr>
+        <td>2019-01-29</td>
+        <td>73</td>
+    </tr>
+    
+    <tr>
+        <td>2019-01-30</td>
+        <td>79</td>
+    </tr>
+    
+    <tr>
+        <td>2019-01-31</td>
+        <td>77</td>
+    </tr>
+    
+    <tr>
+        <td>2019-02-01</td>
+        <td>80</td>
+    </tr>
+    
+    <tr>
+        <td>2019-02-02</td>
+        <td>65</td>
+    </tr>
+    
+    <tr>
+        <td>2019-02-03</td>
+        <td>70</td>
+    </tr>
+    
+    <tr>
+        <td>2019-02-04</td>
+        <td>83</td>
+    </tr>
+    
+    <tr>
+        <td>2019-02-05</td>
+        <td>77</td>
+    </tr>
+    
+    <tr>
+        <td>2019-02-06</td>
+        <td>81</td>
+    </tr>
+    
+    <tr>
+        <td>2019-02-07</td>
+        <td>70</td>
+    </tr>
+    
+    <tr>
+        <td>2019-02-08</td>
+        <td>80</td>
+    </tr>
+    
+    <tr>
+        <td>2019-02-09</td>
+        <td>65</td>
+    </tr>
+    
+    <tr>
+        <td>2019-02-10</td>
+        <td>64</td>
+    </tr>
+    
+    <tr>
+        <td>2019-02-11</td>
+        <td>75</td>
+    </tr>
+    
+    <tr>
+        <td>2019-02-12</td>
+        <td>73</td>
+    </tr>
+    
+    <tr>
+        <td>2019-02-13</td>
+        <td>71</td>
+    </tr>
+    
+    <tr>
+        <td>2019-02-14</td>
+        <td>78</td>
+    </tr>
+    
+    <tr>
+        <td>2019-02-15</td>
+        <td>78</td>
+    </tr>
+    
+    <tr>
+        <td>2019-02-16</td>
+        <td>73</td>
+    </tr>
+    
+    <tr>
+        <td>2019-02-17</td>
+        <td>76</td>
+    </tr>
+    
+    <tr>
+        <td>2019-02-18</td>
+        <td>85</td>
+    </tr>
+    
+    <tr>
+        <td>2019-02-19</td>
+        <td>80</td>
+    </tr>
+    
+    <tr>
+        <td>2019-02-20</td>
+        <td>86</td>
+    </tr>
+    
+    <tr>
+        <td>2019-02-21</td>
+        <td>88</td>
+    </tr>
+    
+    <tr>
+        <td>2019-02-22</td>
+        <td>79</td>
+    </tr>
+    
+    <tr>
+        <td>2019-02-23</td>
+        <td>71</td>
+    </tr>
+    
+    <tr>
+        <td>2019-02-24</td>
+        <td>61</td>
+    </tr>
+    
+    <tr>
+        <td>2019-02-25</td>
+        <td>68</td>
+    </tr>
+    
+    <tr>
+        <td>2019-02-26</td>
+        <td>76</td>
+    </tr>
+    
+    <tr>
+        <td>2019-02-27</td>
+        <td>82</td>
+    </tr>
+    
+    <tr>
+        <td>2019-02-28</td>
+        <td>80</td>
+    </tr>
+    
+    <tr>
+        <td>2019-03-01</td>
+        <td>75</td>
+    </tr>
+    
+    <tr>
+        <td>2019-03-02</td>
+        <td>66</td>
+    </tr>
+    
+    <tr>
+        <td>2019-03-03</td>
+        <td>61</td>
+    </tr>
+    
+    <tr>
+        <td>2019-03-04</td>
+        <td>75</td>
+    </tr>
+    
+    <tr>
+        <td>2019-03-05</td>
+        <td>80</td>
+    </tr>
+    
+    <tr>
+        <td>2019-03-06</td>
+        <td>76</td>
+    </tr>
+    
+    <tr>
+        <td>2019-03-07</td>
+        <td>76</td>
+    </tr>
+    
+    <tr>
+        <td>2019-03-08</td>
+        <td>77</td>
+    </tr>
+    
+    <tr>
+        <td>2019-03-09</td>
+        <td>61</td>
+    </tr>
+    
+    <tr>
+        <td>2019-03-10</td>
+        <td>59</td>
+    </tr>
+    
+    <tr>
+        <td>2019-03-11</td>
+        <td>71</td>
+    </tr>
+    
+    <tr>
+        <td>2019-03-12</td>
+        <td>75</td>
+    </tr>
+    
+    <tr>
+        <td>2019-03-13</td>
+        <td>77</td>
+    </tr>
+    
+    <tr>
+        <td>2019-03-14</td>
+        <td>79</td>
+    </tr>
+    
+    <tr>
+        <td>2019-03-15</td>
+        <td>72</td>
+    </tr>
+    
+    <tr>
+        <td>2019-03-16</td>
+        <td>54</td>
+    </tr>
+    
+    <tr>
+        <td>2019-03-17</td>
+        <td>56</td>
+    </tr>
+    
+    <tr>
+        <td>2019-03-18</td>
+        <td>67</td>
+    </tr>
+    
+    <tr>
+        <td>2019-03-19</td>
+        <td>72</td>
+    </tr>
+    
+    <tr>
+        <td>2019-03-20</td>
+        <td>72</td>
+    </tr>
+    
+    <tr>
+        <td>2019-03-21</td>
+        <td>71</td>
+    </tr>
+    
+    <tr>
+        <td>2019-03-22</td>
+        <td>70</td>
+    </tr>
+    
+    <tr>
+        <td>2019-03-23</td>
+        <td>58</td>
+    </tr>
+    
+    <tr>
+        <td>2019-03-24</td>
+        <td>55</td>
+    </tr>
+    
+    <tr>
+        <td>2019-03-25</td>
+        <td>66</td>
+    </tr>
+    
+    <tr>
+        <td>2019-03-26</td>
+        <td>58</td>
+    </tr>
+    
+    <tr>
+        <td>2019-03-27</td>
+        <td>68</td>
+    </tr>
+    
+    <tr>
+        <td>2019-03-28</td>
+        <td>63</td>
+    </tr>
+    
+    <tr>
+        <td>2019-03-29</td>
+        <td>60</td>
+    </tr>
+    
+    <tr>
+        <td>2019-03-30</td>
+        <td>40</td>
+    </tr>
+    
+    <tr>
+        <td>2019-03-31</td>
+        <td>51</td>
+    </tr>
+    
+    <tr>
+        <td>2019-04-01</td>
+        <td>64</td>
+    </tr>
+    
+    <tr>
+        <td>2019-04-02</td>
+        <td>63</td>
+    </tr>
+    
+    <tr>
+        <td>2019-04-03</td>
+        <td>58</td>
+    </tr>
+    
+    <tr>
+        <td>2019-04-04</td>
+        <td>54</td>
+    </tr>
+    
+    <tr>
+        <td>2019-04-05</td>
+        <td>56</td>
+    </tr>
+    
+    <tr>
+        <td>2019-04-06</td>
+        <td>50</td>
+    </tr>
+    
+    <tr>
+        <td>2019-04-07</td>
+        <td>42</td>
+    </tr>
+    
+    <tr>
+        <td>2019-04-08</td>
+        <td>48</td>
+    </tr>
+    
+    <tr>
+        <td>2019-04-09</td>
+        <td>55</td>
+    </tr>
+    
+    <tr>
+        <td>2019-04-10</td>
+        <td>44</td>
+    </tr>
+    
+    <tr>
+        <td>2019-04-11</td>
+        <td>42</td>
+    </tr>
+    
+    <tr>
+        <td>2019-04-12</td>
+        <td>46</td>
+    </tr>
+    
+    <tr>
+        <td>2019-04-13</td>
+        <td>46</td>
+    </tr>
+    
+    <tr>
+        <td>2019-04-14</td>
+        <td>38</td>
+    </tr>
+    
+    <tr>
+        <td>2019-04-15</td>
+        <td>5</td>
+    </tr>
+    
+    </tbody>
+</table>
+
+<h4>Mean activity frequency of users</h4>
+<table>
+    <thead>
+    <th>User ID</th>
+    <th>Mean Timedelta in hours</th>
+    </thead>
+    <tbody>
+    
+    <tr>
+        <td>1</td>
+        <td>22</td>
+    </tr>
+    
+    <tr>
+        <td>2</td>
+        <td>23</td>
+    </tr>
+    
+    <tr>
+        <td>3</td>
+        <td>19</td>
+    </tr>
+    
+    <tr>
+        <td>4</td>
+        <td>5</td>
+    </tr>
+    
+    <tr>
+        <td>5</td>
+        <td>4</td>
+    </tr>
+    
+    <tr>
+        <td>6</td>
+        <td>21</td>
+    </tr>
+    
+    <tr>
+        <td>7</td>
+        <td>14</td>
+    </tr>
+    
+    <tr>
+        <td>8</td>
+        <td>10</td>
+    </tr>
+    
+    <tr>
+        <td>9</td>
+        <td>20</td>
+    </tr>
+    
+    <tr>
+        <td>10</td>
+        <td>0</td>
+    </tr>
+    
+    <tr>
+        <td>11</td>
+        <td>0</td>
+    </tr>
+    
+    <tr>
+        <td>12</td>
+        <td>18</td>
+    </tr>
+    
+    <tr>
+        <td>13</td>
+        <td>16</td>
+    </tr>
+    
+    <tr>
+        <td>14</td>
+        <td>5</td>
+    </tr>
+    
+    <tr>
+        <td>15</td>
+        <td>8</td>
+    </tr>
+    
+    <tr>
+        <td>16</td>
+        <td>21</td>
+    </tr>
+    
+    <tr>
+        <td>17</td>
+        <td>5</td>
+    </tr>
+    
+    <tr>
+        <td>18</td>
+        <td>18</td>
+    </tr>
+    
+    <tr>
+        <td>19</td>
+        <td>1</td>
+    </tr>
+    
+    <tr>
+        <td>20</td>
+        <td>20</td>
+    </tr>
+    
+    <tr>
+        <td>21</td>
+        <td>3</td>
+    </tr>
+    
+    <tr>
+        <td>22</td>
+        <td>10</td>
+    </tr>
+    
+    <tr>
+        <td>23</td>
+        <td>10</td>
+    </tr>
+    
+    <tr>
+        <td>24</td>
+        <td>20</td>
+    </tr>
+    
+    <tr>
+        <td>25</td>
+        <td>10</td>
+    </tr>
+    
+    <tr>
+        <td>26</td>
+        <td>16</td>
+    </tr>
+    
+    <tr>
+        <td>27</td>
+        <td>18</td>
+    </tr>
+    
+    <tr>
+        <td>28</td>
+        <td>14</td>
+    </tr>
+    
+    <tr>
+        <td>29</td>
+        <td>23</td>
+    </tr>
+    
+    <tr>
+        <td>30</td>
+        <td>11</td>
+    </tr>
+    
+    <tr>
+        <td>31</td>
+        <td>8</td>
+    </tr>
+    
+    <tr>
+        <td>32</td>
+        <td>13</td>
+    </tr>
+    
+    <tr>
+        <td>33</td>
+        <td>5</td>
+    </tr>
+    
+    <tr>
+        <td>34</td>
+        <td>21</td>
+    </tr>
+    
+    <tr>
+        <td>35</td>
+        <td>0</td>
+    </tr>
+    
+    <tr>
+        <td>36</td>
+        <td>22</td>
+    </tr>
+    
+    <tr>
+        <td>37</td>
+        <td>23</td>
+    </tr>
+    
+    <tr>
+        <td>38</td>
+        <td>0</td>
+    </tr>
+    
+    <tr>
+        <td>39</td>
+        <td>21</td>
+    </tr>
+    
+    <tr>
+        <td>40</td>
+        <td>12</td>
+    </tr>
+    
+    <tr>
+        <td>41</td>
+        <td>0</td>
+    </tr>
+    
+    <tr>
+        <td>42</td>
+        <td>22</td>
+    </tr>
+    
+    <tr>
+        <td>43</td>
+        <td>0</td>
+    </tr>
+    
+    <tr>
+        <td>44</td>
+        <td>2</td>
+    </tr>
+    
+    <tr>
+        <td>46</td>
+        <td>23</td>
+    </tr>
+    
+    <tr>
+        <td>48</td>
+        <td>0</td>
+    </tr>
+    
+    <tr>
+        <td>49</td>
+        <td>22</td>
+    </tr>
+    
+    <tr>
+        <td>50</td>
+        <td>23</td>
+    </tr>
+    
+    <tr>
+        <td>51</td>
+        <td>3</td>
+    </tr>
+    
+    <tr>
+        <td>53</td>
+        <td>22</td>
+    </tr>
+    
+    <tr>
+        <td>56</td>
+        <td>12</td>
+    </tr>
+    
+    <tr>
+        <td>57</td>
+        <td>0</td>
+    </tr>
+    
+    <tr>
+        <td>59</td>
+        <td>15</td>
+    </tr>
+    
+    <tr>
+        <td>60</td>
+        <td>22</td>
+    </tr>
+    
+    <tr>
+        <td>61</td>
+        <td>12</td>
+    </tr>
+    
+    <tr>
+        <td>62</td>
+        <td>10</td>
+    </tr>
+    
+    <tr>
+        <td>63</td>
+        <td>0</td>
+    </tr>
+    
+    <tr>
+        <td>64</td>
+        <td>10</td>
+    </tr>
+    
+    <tr>
+        <td>65</td>
+        <td>10</td>
+    </tr>
+    
+    <tr>
+        <td>66</td>
+        <td>20</td>
+    </tr>
+    
+    <tr>
+        <td>67</td>
+        <td>18</td>
+    </tr>
+    
+    <tr>
+        <td>68</td>
+        <td>18</td>
+    </tr>
+    
+    <tr>
+        <td>69</td>
+        <td>17</td>
+    </tr>
+    
+    <tr>
+        <td>70</td>
+        <td>5</td>
+    </tr>
+    
+    <tr>
+        <td>71</td>
+        <td>0</td>
+    </tr>
+    
+    <tr>
+        <td>72</td>
+        <td>14</td>
+    </tr>
+    
+    <tr>
+        <td>73</td>
+        <td>23</td>
+    </tr>
+    
+    <tr>
+        <td>74</td>
+        <td>21</td>
+    </tr>
+    
+    <tr>
+        <td>75</td>
+        <td>20</td>
+    </tr>
+    
+    <tr>
+        <td>77</td>
+        <td>9</td>
+    </tr>
+    
+    <tr>
+        <td>78</td>
+        <td>22</td>
+    </tr>
+    
+    <tr>
+        <td>79</td>
+        <td>17</td>
+    </tr>
+    
+    <tr>
+        <td>80</td>
+        <td>9</td>
+    </tr>
+    
+    <tr>
+        <td>81</td>
+        <td>20</td>
+    </tr>
+    
+    <tr>
+        <td>82</td>
+        <td>15</td>
+    </tr>
+    
+    <tr>
+        <td>83</td>
+        <td>12</td>
+    </tr>
+    
+    <tr>
+        <td>84</td>
+        <td>0</td>
+    </tr>
+    
+    <tr>
+        <td>85</td>
+        <td>16</td>
+    </tr>
+    
+    <tr>
+        <td>86</td>
+        <td>0</td>
+    </tr>
+    
+    <tr>
+        <td>88</td>
+        <td>22</td>
+    </tr>
+    
+    <tr>
+        <td>89</td>
+        <td>19</td>
+    </tr>
+    
+    <tr>
+        <td>90</td>
+        <td>8</td>
+    </tr>
+    
+    <tr>
+        <td>91</td>
+        <td>20</td>
+    </tr>
+    
+    <tr>
+        <td>92</td>
+        <td>6</td>
+    </tr>
+    
+    <tr>
+        <td>93</td>
+        <td>0</td>
+    </tr>
+    
+    <tr>
+        <td>94</td>
+        <td>0</td>
+    </tr>
+    
+    <tr>
+        <td>96</td>
+        <td>13</td>
+    </tr>
+    
+    <tr>
+        <td>98</td>
+        <td>21</td>
+    </tr>
+    
+    <tr>
+        <td>99</td>
+        <td>8</td>
+    </tr>
+    
+    <tr>
+        <td>100</td>
+        <td>0</td>
+    </tr>
+    
+    <tr>
+        <td>101</td>
+        <td>21</td>
+    </tr>
+    
+    <tr>
+        <td>102</td>
+        <td>14</td>
+    </tr>
+    
+    <tr>
+        <td>104</td>
+        <td>22</td>
+    </tr>
+    
+    <tr>
+        <td>105</td>
+        <td>12</td>
+    </tr>
+    
+    <tr>
+        <td>106</td>
+        <td>5</td>
+    </tr>
+    
+    <tr>
+        <td>107</td>
+        <td>0</td>
+    </tr>
+    
+    <tr>
+        <td>108</td>
+        <td>0</td>
+    </tr>
+    
+    <tr>
+        <td>109</td>
+        <td>9</td>
+    </tr>
+    
+    <tr>
+        <td>110</td>
+        <td>16</td>
+    </tr>
+    
+    <tr>
+        <td>111</td>
+        <td>15</td>
+    </tr>
+    
+    <tr>
+        <td>112</td>
+        <td>16</td>
+    </tr>
+    
+    <tr>
+        <td>113</td>
+        <td>18</td>
+    </tr>
+    
+    <tr>
+        <td>114</td>
+        <td>5</td>
+    </tr>
+    
+    <tr>
+        <td>115</td>
+        <td>12</td>
+    </tr>
+    
+    <tr>
+        <td>117</td>
+        <td>0</td>
+    </tr>
+    
+    <tr>
+        <td>118</td>
+        <td>4</td>
+    </tr>
+    
+    <tr>
+        <td>120</td>
+        <td>0</td>
+    </tr>
+    
+    <tr>
+        <td>121</td>
+        <td>6</td>
+    </tr>
+    
+    <tr>
+        <td>122</td>
+        <td>21</td>
+    </tr>
+    
+    <tr>
+        <td>124</td>
+        <td>0</td>
+    </tr>
+    
+    <tr>
+        <td>125</td>
+        <td>13</td>
+    </tr>
+    
+    <tr>
+        <td>126</td>
+        <td>19</td>
+    </tr>
+    
+    <tr>
+        <td>128</td>
+        <td>11</td>
+    </tr>
+    
+    <tr>
+        <td>129</td>
+        <td>13</td>
+    </tr>
+    
+    <tr>
+        <td>130</td>
+        <td>16</td>
+    </tr>
+    
+    <tr>
+        <td>131</td>
+        <td>13</td>
+    </tr>
+    
+    <tr>
+        <td>132</td>
+        <td>0</td>
+    </tr>
+    
+    <tr>
+        <td>133</td>
+        <td>0</td>
+    </tr>
+    
+    <tr>
+        <td>134</td>
+        <td>11</td>
+    </tr>
+    
+    <tr>
+        <td>135</td>
+        <td>0</td>
+    </tr>
+    
+    <tr>
+        <td>136</td>
+        <td>15</td>
+    </tr>
+    
+    <tr>
+        <td>137</td>
+        <td>15</td>
+    </tr>
+    
+    <tr>
+        <td>138</td>
+        <td>21</td>
+    </tr>
+    
+    <tr>
+        <td>139</td>
+        <td>6</td>
+    </tr>
+    
+    <tr>
+        <td>140</td>
+        <td>10</td>
+    </tr>
+    
+    <tr>
+        <td>141</td>
+        <td>9</td>
+    </tr>
+    
+    <tr>
+        <td>142</td>
+        <td>14</td>
+    </tr>
+    
+    <tr>
+        <td>143</td>
+        <td>19</td>
+    </tr>
+    
+    <tr>
+        <td>144</td>
+        <td>12</td>
+    </tr>
+    
+    <tr>
+        <td>145</td>
+        <td>3</td>
+    </tr>
+    
+    <tr>
+        <td>146</td>
+        <td>0</td>
+    </tr>
+    
+    <tr>
+        <td>147</td>
+        <td>0</td>
+    </tr>
+    
+    <tr>
+        <td>148</td>
+        <td>12</td>
+    </tr>
+    
+    <tr>
+        <td>149</td>
+        <td>22</td>
+    </tr>
+    
+    <tr>
+        <td>150</td>
+        <td>19</td>
+    </tr>
+    
+    <tr>
+        <td>151</td>
+        <td>16</td>
+    </tr>
+    
+    <tr>
+        <td>152</td>
+        <td>12</td>
+    </tr>
+    
+    <tr>
+        <td>153</td>
+        <td>16</td>
+    </tr>
+    
+    <tr>
+        <td>154</td>
+        <td>18</td>
+    </tr>
+    
+    <tr>
+        <td>155</td>
+        <td>0</td>
+    </tr>
+    
+    <tr>
+        <td>156</td>
+        <td>21</td>
+    </tr>
+    
+    <tr>
+        <td>157</td>
+        <td>0</td>
+    </tr>
+    
+    <tr>
+        <td>159</td>
+        <td>0</td>
+    </tr>
+    
+    <tr>
+        <td>160</td>
+        <td>21</td>
+    </tr>
+    
+    <tr>
+        <td>162</td>
+        <td>0</td>
+    </tr>
+    
+    <tr>
+        <td>163</td>
+        <td>17</td>
+    </tr>
+    
+    <tr>
+        <td>164</td>
+        <td>14</td>
+    </tr>
+    
+    <tr>
+        <td>165</td>
+        <td>18</td>
+    </tr>
+    
+    <tr>
+        <td>166</td>
+        <td>12</td>
+    </tr>
+    
+    <tr>
+        <td>167</td>
+        <td>9</td>
+    </tr>
+    
+    <tr>
+        <td>168</td>
+        <td>13</td>
+    </tr>
+    
+    <tr>
+        <td>169</td>
+        <td>10</td>
+    </tr>
+    
+    <tr>
+        <td>170</td>
+        <td>22</td>
+    </tr>
+    
+    <tr>
+        <td>171</td>
+        <td>14</td>
+    </tr>
+    
+    <tr>
+        <td>172</td>
+        <td>19</td>
+    </tr>
+    
+    <tr>
+        <td>173</td>
+        <td>17</td>
+    </tr>
+    
+    <tr>
+        <td>174</td>
+        <td>14</td>
+    </tr>
+    
+    <tr>
+        <td>175</td>
+        <td>14</td>
+    </tr>
+    
+    <tr>
+        <td>176</td>
+        <td>13</td>
+    </tr>
+    
+    <tr>
+        <td>177</td>
+        <td>17</td>
+    </tr>
+    
+    <tr>
+        <td>178</td>
+        <td>12</td>
+    </tr>
+    
+    <tr>
+        <td>179</td>
+        <td>17</td>
+    </tr>
+    
+    <tr>
+        <td>180</td>
+        <td>2</td>
+    </tr>
+    
+    <tr>
+        <td>181</td>
+        <td>0</td>
+    </tr>
+    
+    <tr>
+        <td>182</td>
+        <td>9</td>
+    </tr>
+    
+    <tr>
+        <td>183</td>
+        <td>2</td>
+    </tr>
+    
+    <tr>
+        <td>184</td>
+        <td>13</td>
+    </tr>
+    
+    <tr>
+        <td>185</td>
+        <td>16</td>
+    </tr>
+    
+    <tr>
+        <td>186</td>
+        <td>20</td>
+    </tr>
+    
+    <tr>
+        <td>187</td>
+        <td>5</td>
+    </tr>
+    
+    <tr>
+        <td>188</td>
+        <td>18</td>
+    </tr>
+    
+    <tr>
+        <td>189</td>
+        <td>22</td>
+    </tr>
+    
+    <tr>
+        <td>190</td>
+        <td>23</td>
+    </tr>
+    
+    <tr>
+        <td>191</td>
+        <td>0</td>
+    </tr>
+    
+    <tr>
+        <td>192</td>
+        <td>20</td>
+    </tr>
+    
+    <tr>
+        <td>194</td>
+        <td>8</td>
+    </tr>
+    
+    <tr>
+        <td>195</td>
+        <td>16</td>
+    </tr>
+    
+    <tr>
+        <td>196</td>
+        <td>0</td>
+    </tr>
+    
+    <tr>
+        <td>197</td>
+        <td>8</td>
+    </tr>
+    
+    <tr>
+        <td>199</td>
+        <td>9</td>
+    </tr>
+    
+    <tr>
+        <td>200</td>
+        <td>0</td>
+    </tr>
+    
+    <tr>
+        <td>201</td>
+        <td>5</td>
+    </tr>
+    
+    </tbody>
+</table>
+<!--[{&#39;user_id&#39;: 1, &#39;mean&#39;: 22}, {&#39;user_id&#39;: 2, &#39;mean&#39;: 23}, {&#39;user_id&#39;: 3, &#39;mean&#39;: 19}, {&#39;user_id&#39;: 4, &#39;mean&#39;: 5}, {&#39;user_id&#39;: 5, &#39;mean&#39;: 4}, {&#39;user_id&#39;: 6, &#39;mean&#39;: 21}, {&#39;user_id&#39;: 7, &#39;mean&#39;: 14}, {&#39;user_id&#39;: 8, &#39;mean&#39;: 10}, {&#39;user_id&#39;: 9, &#39;mean&#39;: 20}, {&#39;user_id&#39;: 10, &#39;mean&#39;: 0}, {&#39;user_id&#39;: 11, &#39;mean&#39;: 0}, {&#39;user_id&#39;: 12, &#39;mean&#39;: 18}, {&#39;user_id&#39;: 13, &#39;mean&#39;: 16}, {&#39;user_id&#39;: 14, &#39;mean&#39;: 5}, {&#39;user_id&#39;: 15, &#39;mean&#39;: 8}, {&#39;user_id&#39;: 16, &#39;mean&#39;: 21}, {&#39;user_id&#39;: 17, &#39;mean&#39;: 5}, {&#39;user_id&#39;: 18, &#39;mean&#39;: 18}, {&#39;user_id&#39;: 19, &#39;mean&#39;: 1}, {&#39;user_id&#39;: 20, &#39;mean&#39;: 20}, {&#39;user_id&#39;: 21, &#39;mean&#39;: 3}, {&#39;user_id&#39;: 22, &#39;mean&#39;: 10}, {&#39;user_id&#39;: 23, &#39;mean&#39;: 10}, {&#39;user_id&#39;: 24, &#39;mean&#39;: 20}, {&#39;user_id&#39;: 25, &#39;mean&#39;: 10}, {&#39;user_id&#39;: 26, &#39;mean&#39;: 16}, {&#39;user_id&#39;: 27, &#39;mean&#39;: 18}, {&#39;user_id&#39;: 28, &#39;mean&#39;: 14}, {&#39;user_id&#39;: 29, &#39;mean&#39;: 23}, {&#39;user_id&#39;: 30, &#39;mean&#39;: 11}, {&#39;user_id&#39;: 31, &#39;mean&#39;: 8}, {&#39;user_id&#39;: 32, &#39;mean&#39;: 13}, {&#39;user_id&#39;: 33, &#39;mean&#39;: 5}, {&#39;user_id&#39;: 34, &#39;mean&#39;: 21}, {&#39;user_id&#39;: 35, &#39;mean&#39;: 0}, {&#39;user_id&#39;: 36, &#39;mean&#39;: 22}, {&#39;user_id&#39;: 37, &#39;mean&#39;: 23}, {&#39;user_id&#39;: 38, &#39;mean&#39;: 0}, {&#39;user_id&#39;: 39, &#39;mean&#39;: 21}, {&#39;user_id&#39;: 40, &#39;mean&#39;: 12}, {&#39;user_id&#39;: 41, &#39;mean&#39;: 0}, {&#39;user_id&#39;: 42, &#39;mean&#39;: 22}, {&#39;user_id&#39;: 43, &#39;mean&#39;: 0}, {&#39;user_id&#39;: 44, &#39;mean&#39;: 2}, {&#39;user_id&#39;: 46, &#39;mean&#39;: 23}, {&#39;user_id&#39;: 48, &#39;mean&#39;: 0}, {&#39;user_id&#39;: 49, &#39;mean&#39;: 22}, {&#39;user_id&#39;: 50, &#39;mean&#39;: 23}, {&#39;user_id&#39;: 51, &#39;mean&#39;: 3}, {&#39;user_id&#39;: 53, &#39;mean&#39;: 22}, {&#39;user_id&#39;: 56, &#39;mean&#39;: 12}, {&#39;user_id&#39;: 57, &#39;mean&#39;: 0}, {&#39;user_id&#39;: 59, &#39;mean&#39;: 15}, {&#39;user_id&#39;: 60, &#39;mean&#39;: 22}, {&#39;user_id&#39;: 61, &#39;mean&#39;: 12}, {&#39;user_id&#39;: 62, &#39;mean&#39;: 10}, {&#39;user_id&#39;: 63, &#39;mean&#39;: 0}, {&#39;user_id&#39;: 64, &#39;mean&#39;: 10}, {&#39;user_id&#39;: 65, &#39;mean&#39;: 10}, {&#39;user_id&#39;: 66, &#39;mean&#39;: 20}, {&#39;user_id&#39;: 67, &#39;mean&#39;: 18}, {&#39;user_id&#39;: 68, &#39;mean&#39;: 18}, {&#39;user_id&#39;: 69, &#39;mean&#39;: 17}, {&#39;user_id&#39;: 70, &#39;mean&#39;: 5}, {&#39;user_id&#39;: 71, &#39;mean&#39;: 0}, {&#39;user_id&#39;: 72, &#39;mean&#39;: 14}, {&#39;user_id&#39;: 73, &#39;mean&#39;: 23}, {&#39;user_id&#39;: 74, &#39;mean&#39;: 21}, {&#39;user_id&#39;: 75, &#39;mean&#39;: 20}, {&#39;user_id&#39;: 77, &#39;mean&#39;: 9}, {&#39;user_id&#39;: 78, &#39;mean&#39;: 22}, {&#39;user_id&#39;: 79, &#39;mean&#39;: 17}, {&#39;user_id&#39;: 80, &#39;mean&#39;: 9}, {&#39;user_id&#39;: 81, &#39;mean&#39;: 20}, {&#39;user_id&#39;: 82, &#39;mean&#39;: 15}, {&#39;user_id&#39;: 83, &#39;mean&#39;: 12}, {&#39;user_id&#39;: 84, &#39;mean&#39;: 0}, {&#39;user_id&#39;: 85, &#39;mean&#39;: 16}, {&#39;user_id&#39;: 86, &#39;mean&#39;: 0}, {&#39;user_id&#39;: 88, &#39;mean&#39;: 22}, {&#39;user_id&#39;: 89, &#39;mean&#39;: 19}, {&#39;user_id&#39;: 90, &#39;mean&#39;: 8}, {&#39;user_id&#39;: 91, &#39;mean&#39;: 20}, {&#39;user_id&#39;: 92, &#39;mean&#39;: 6}, {&#39;user_id&#39;: 93, &#39;mean&#39;: 0}, {&#39;user_id&#39;: 94, &#39;mean&#39;: 0}, {&#39;user_id&#39;: 96, &#39;mean&#39;: 13}, {&#39;user_id&#39;: 98, &#39;mean&#39;: 21}, {&#39;user_id&#39;: 99, &#39;mean&#39;: 8}, {&#39;user_id&#39;: 100, &#39;mean&#39;: 0}, {&#39;user_id&#39;: 101, &#39;mean&#39;: 21}, {&#39;user_id&#39;: 102, &#39;mean&#39;: 14}, {&#39;user_id&#39;: 104, &#39;mean&#39;: 22}, {&#39;user_id&#39;: 105, &#39;mean&#39;: 12}, {&#39;user_id&#39;: 106, &#39;mean&#39;: 5}, {&#39;user_id&#39;: 107, &#39;mean&#39;: 0}, {&#39;user_id&#39;: 108, &#39;mean&#39;: 0}, {&#39;user_id&#39;: 109, &#39;mean&#39;: 9}, {&#39;user_id&#39;: 110, &#39;mean&#39;: 16}, {&#39;user_id&#39;: 111, &#39;mean&#39;: 15}, {&#39;user_id&#39;: 112, &#39;mean&#39;: 16}, {&#39;user_id&#39;: 113, &#39;mean&#39;: 18}, {&#39;user_id&#39;: 114, &#39;mean&#39;: 5}, {&#39;user_id&#39;: 115, &#39;mean&#39;: 12}, {&#39;user_id&#39;: 117, &#39;mean&#39;: 0}, {&#39;user_id&#39;: 118, &#39;mean&#39;: 4}, {&#39;user_id&#39;: 120, &#39;mean&#39;: 0}, {&#39;user_id&#39;: 121, &#39;mean&#39;: 6}, {&#39;user_id&#39;: 122, &#39;mean&#39;: 21}, {&#39;user_id&#39;: 124, &#39;mean&#39;: 0}, {&#39;user_id&#39;: 125, &#39;mean&#39;: 13}, {&#39;user_id&#39;: 126, &#39;mean&#39;: 19}, {&#39;user_id&#39;: 128, &#39;mean&#39;: 11}, {&#39;user_id&#39;: 129, &#39;mean&#39;: 13}, {&#39;user_id&#39;: 130, &#39;mean&#39;: 16}, {&#39;user_id&#39;: 131, &#39;mean&#39;: 13}, {&#39;user_id&#39;: 132, &#39;mean&#39;: 0}, {&#39;user_id&#39;: 133, &#39;mean&#39;: 0}, {&#39;user_id&#39;: 134, &#39;mean&#39;: 11}, {&#39;user_id&#39;: 135, &#39;mean&#39;: 0}, {&#39;user_id&#39;: 136, &#39;mean&#39;: 15}, {&#39;user_id&#39;: 137, &#39;mean&#39;: 15}, {&#39;user_id&#39;: 138, &#39;mean&#39;: 21}, {&#39;user_id&#39;: 139, &#39;mean&#39;: 6}, {&#39;user_id&#39;: 140, &#39;mean&#39;: 10}, {&#39;user_id&#39;: 141, &#39;mean&#39;: 9}, {&#39;user_id&#39;: 142, &#39;mean&#39;: 14}, {&#39;user_id&#39;: 143, &#39;mean&#39;: 19}, {&#39;user_id&#39;: 144, &#39;mean&#39;: 12}, {&#39;user_id&#39;: 145, &#39;mean&#39;: 3}, {&#39;user_id&#39;: 146, &#39;mean&#39;: 0}, {&#39;user_id&#39;: 147, &#39;mean&#39;: 0}, {&#39;user_id&#39;: 148, &#39;mean&#39;: 12}, {&#39;user_id&#39;: 149, &#39;mean&#39;: 22}, {&#39;user_id&#39;: 150, &#39;mean&#39;: 19}, {&#39;user_id&#39;: 151, &#39;mean&#39;: 16}, {&#39;user_id&#39;: 152, &#39;mean&#39;: 12}, {&#39;user_id&#39;: 153, &#39;mean&#39;: 16}, {&#39;user_id&#39;: 154, &#39;mean&#39;: 18}, {&#39;user_id&#39;: 155, &#39;mean&#39;: 0}, {&#39;user_id&#39;: 156, &#39;mean&#39;: 21}, {&#39;user_id&#39;: 157, &#39;mean&#39;: 0}, {&#39;user_id&#39;: 159, &#39;mean&#39;: 0}, {&#39;user_id&#39;: 160, &#39;mean&#39;: 21}, {&#39;user_id&#39;: 162, &#39;mean&#39;: 0}, {&#39;user_id&#39;: 163, &#39;mean&#39;: 17}, {&#39;user_id&#39;: 164, &#39;mean&#39;: 14}, {&#39;user_id&#39;: 165, &#39;mean&#39;: 18}, {&#39;user_id&#39;: 166, &#39;mean&#39;: 12}, {&#39;user_id&#39;: 167, &#39;mean&#39;: 9}, {&#39;user_id&#39;: 168, &#39;mean&#39;: 13}, {&#39;user_id&#39;: 169, &#39;mean&#39;: 10}, {&#39;user_id&#39;: 170, &#39;mean&#39;: 22}, {&#39;user_id&#39;: 171, &#39;mean&#39;: 14}, {&#39;user_id&#39;: 172, &#39;mean&#39;: 19}, {&#39;user_id&#39;: 173, &#39;mean&#39;: 17}, {&#39;user_id&#39;: 174, &#39;mean&#39;: 14}, {&#39;user_id&#39;: 175, &#39;mean&#39;: 14}, {&#39;user_id&#39;: 176, &#39;mean&#39;: 13}, {&#39;user_id&#39;: 177, &#39;mean&#39;: 17}, {&#39;user_id&#39;: 178, &#39;mean&#39;: 12}, {&#39;user_id&#39;: 179, &#39;mean&#39;: 17}, {&#39;user_id&#39;: 180, &#39;mean&#39;: 2}, {&#39;user_id&#39;: 181, &#39;mean&#39;: 0}, {&#39;user_id&#39;: 182, &#39;mean&#39;: 9}, {&#39;user_id&#39;: 183, &#39;mean&#39;: 2}, {&#39;user_id&#39;: 184, &#39;mean&#39;: 13}, {&#39;user_id&#39;: 185, &#39;mean&#39;: 16}, {&#39;user_id&#39;: 186, &#39;mean&#39;: 20}, {&#39;user_id&#39;: 187, &#39;mean&#39;: 5}, {&#39;user_id&#39;: 188, &#39;mean&#39;: 18}, {&#39;user_id&#39;: 189, &#39;mean&#39;: 22}, {&#39;user_id&#39;: 190, &#39;mean&#39;: 23}, {&#39;user_id&#39;: 191, &#39;mean&#39;: 0}, {&#39;user_id&#39;: 192, &#39;mean&#39;: 20}, {&#39;user_id&#39;: 194, &#39;mean&#39;: 8}, {&#39;user_id&#39;: 195, &#39;mean&#39;: 16}, {&#39;user_id&#39;: 196, &#39;mean&#39;: 0}, {&#39;user_id&#39;: 197, &#39;mean&#39;: 8}, {&#39;user_id&#39;: 199, &#39;mean&#39;: 9}, {&#39;user_id&#39;: 200, &#39;mean&#39;: 0}, {&#39;user_id&#39;: 201, &#39;mean&#39;: 5}]-->
+
+<h4>Most active hours of the day</h4>
+<table>
+    <thead>
+    <th>Hour</th>
+    <th>Activity</th>
+
+    </thead>
+    <tbody>
+    
+    <tr>
+        <td>0</td>
+        <td>1453</td>
+    </tr>
+    
+    <tr>
+        <td>1</td>
+        <td>1231</td>
+    </tr>
+    
+    <tr>
+        <td>2</td>
+        <td>1124</td>
+    </tr>
+    
+    <tr>
+        <td>3</td>
+        <td>1027</td>
+    </tr>
+    
+    <tr>
+        <td>4</td>
+        <td>1030</td>
+    </tr>
+    
+    <tr>
+        <td>5</td>
+        <td>1053</td>
+    </tr>
+    
+    <tr>
+        <td>6</td>
+        <td>1219</td>
+    </tr>
+    
+    <tr>
+        <td>7</td>
+        <td>1441</td>
+    </tr>
+    
+    <tr>
+        <td>8</td>
+        <td>1569</td>
+    </tr>
+    
+    <tr>
+        <td>9</td>
+        <td>1576</td>
+    </tr>
+    
+    <tr>
+        <td>10</td>
+        <td>1593</td>
+    </tr>
+    
+    <tr>
+        <td>11</td>
+        <td>1764</td>
+    </tr>
+    
+    <tr>
+        <td>12</td>
+        <td>1881</td>
+    </tr>
+    
+    <tr>
+        <td>13</td>
+        <td>1990</td>
+    </tr>
+    
+    <tr>
+        <td>14</td>
+        <td>2137</td>
+    </tr>
+    
+    <tr>
+        <td>15</td>
+        <td>2202</td>
+    </tr>
+    
+    <tr>
+        <td>16</td>
+        <td>2252</td>
+    </tr>
+    
+    <tr>
+        <td>17</td>
+        <td>2167</td>
+    </tr>
+    
+    <tr>
+        <td>18</td>
+        <td>2102</td>
+    </tr>
+    
+    <tr>
+        <td>19</td>
+        <td>1926</td>
+    </tr>
+    
+    <tr>
+        <td>20</td>
+        <td>1823</td>
+    </tr>
+    
+    <tr>
+        <td>21</td>
+        <td>1837</td>
+    </tr>
+    
+    <tr>
+        <td>22</td>
+        <td>1782</td>
+    </tr>
+    
+    <tr>
+        <td>23</td>
+        <td>1681</td>
+    </tr>
+    
+    </tbody>
+</table>
+<div> <h4> Reasoning: </h4> </br> To see the distribution of artists and tracks on the platform. what tracks are the most liked, what artists are the </br>most liked. What artists have the most tracks and what percentage of the platform they are taking. Helps to maybe </br>diversify the offering of the platform and also maybe do special collaborations or exclusives with the artists. </br>Also encouraging less represented artists that have more tracks to publish them also. </div>
+<h4>Amount of Tracks</h4>
+168302
+<h4>Amount of Artists</h4>
+34088
+<h4>Most listened to tracks</h4>
+<table>
+    <thead>
+    <th>Song</th>
+    <th>Times Played</th>
+    </thead>
+    <tbody>
+    
+    <tr>
+        <td>Love Within Narcosis</td>
+        <td>2240</td>
+    </tr>
+    
+    <tr>
+        <td>Love Within Delirium</td>
+        <td>2232</td>
+    </tr>
+    
+    <tr>
+        <td>Love Within Isolation</td>
+        <td>2227</td>
+    </tr>
+    
+    <tr>
+        <td>Season In Desperation</td>
+        <td>2207</td>
+    </tr>
+    
+    <tr>
+        <td>Season In Yonder</td>
+        <td>2193</td>
+    </tr>
+    
+    <tr>
+        <td>Season In Lust</td>
+        <td>2191</td>
+    </tr>
+    
+    <tr>
+        <td>Season In Neglection</td>
+        <td>2191</td>
+    </tr>
+    
+    <tr>
+        <td>Season In Absence</td>
+        <td>2181</td>
+    </tr>
+    
+    <tr>
+        <td>Love Within Restriction</td>
+        <td>2161</td>
+    </tr>
+    
+    <tr>
+        <td>Love Within Autumn</td>
+        <td>2151</td>
+    </tr>
+    
+    </tbody>
+</table>
+<h4>Most listened to artists</h4>
+<table>
+    <thead>
+    <th>Artist</th>
+    <th>Times Played</th>
+    </thead>
+    <tbody>
+    
+    <tr>
+        <td>Vision Éternel</td>
+        <td>46883</td>
+    </tr>
+    
+    <tr>
+        <td>Two Steps from Hell</td>
+        <td>1918</td>
+    </tr>
+    
+    <tr>
+        <td>Johann Sebastian Bach</td>
+        <td>1539</td>
+    </tr>
+    
+    <tr>
+        <td>Radiohead</td>
+        <td>1117</td>
+    </tr>
+    
+    <tr>
+        <td>BrunuhVille</td>
+        <td>1009</td>
+    </tr>
+    
+    <tr>
+        <td>Daughters</td>
+        <td>928</td>
+    </tr>
+    
+    <tr>
+        <td>Anita O&#39;Day</td>
+        <td>874</td>
+    </tr>
+    
+    <tr>
+        <td>Bob Dylan</td>
+        <td>870</td>
+    </tr>
+    
+    <tr>
+        <td>Pink Floyd</td>
+        <td>800</td>
+    </tr>
+    
+    <tr>
+        <td>Bring Me the Horizon</td>
+        <td>770</td>
+    </tr>
+    
+    </tbody>
+</table>
+<h4>Artists with most tracks</h4>
+<table>
+    <thead>
+    <th>Artist</th>
+    <th># Tracks</th>
+    </thead>
+    <tbody>
+    
+    <tr>
+        <td>Johann Sebastian Bach</td>
+        <td>619</td>
+    </tr>
+    
+    <tr>
+        <td>Bob Dylan</td>
+        <td>590</td>
+    </tr>
+    
+    <tr>
+        <td>John Zorn</td>
+        <td>500</td>
+    </tr>
+    
+    <tr>
+        <td>The Beatles</td>
+        <td>400</td>
+    </tr>
+    
+    <tr>
+        <td>Pink Floyd</td>
+        <td>390</td>
+    </tr>
+    
+    <tr>
+        <td>Radiohead</td>
+        <td>389</td>
+    </tr>
+    
+    <tr>
+        <td>Marilyn Manson</td>
+        <td>346</td>
+    </tr>
+    
+    <tr>
+        <td>David Bowie</td>
+        <td>327</td>
+    </tr>
+    
+    <tr>
+        <td>Nine Inch Nails</td>
+        <td>300</td>
+    </tr>
+    
+    <tr>
+        <td>Boredoms</td>
+        <td>283</td>
+    </tr>
+    
+    </tbody>
+</table>
+
+<div> <h3>What other metrics (that aren't available in the given dataset) would you like to add to the report? </br> Prioritize your top 3. </br> Shortly describe your reasoning for what metrics you picked and why you decided to include them in the report.</h3> </div>Metrics I would have also included: </br>1. Genre of the Tracks and Artists </br>Reasoning: </br>Finding out what Genres are the most popular, What is the overal offering of the platform etc. </br>2. More info about the user like age distribution or gender and location </br>Reasoning: </br>General information about the userbase, trend forecasting what age group/userbase will like what songs/genre in future what is trending at the moment etc. </br>3. Percentage of the Song listened to / Skipped a certain part </br>Reasoning: </br>Are there parts of songs that are especially popular and others that are not. Can we find songs with similar patterns to recommend to the users </br></div>
+
+    <!--<p>Result {&#39;kpi_question&#39;: &#39;&lt;div&gt; &lt;h3&gt;The CEO asks you to provide them with a management report containing the most important metrics that you can distill from the dataset. &lt;/br&gt; The desired output is a table showing how these metrics develop over time. &lt;/br&gt; &lt;/br&gt; Consider what the most important metrics are and generate the report using sql queries or a python script. &lt;/h3&gt; &lt;/div&gt;&#39;, &#39;a_reasoning&#39;: &#39;&lt;div&gt; &lt;h4&gt; Reasoning: &lt;/h4&gt; &lt;/br&gt; To see how many users there are, how many of them are daily active users and what are the general activity patterns &lt;/br&gt;on the platform. This helps to extract improvements on the platform and also scale the infrastructure to the demands &lt;/br&gt;for example when there are heavy load hours throughout a day. Also it helps to find out the ratio active users and &lt;/br&gt;in what timespan vs overall userbase and analyzing on how to increase that number. &lt;/div&gt;&#39;, &#39;amount_users&#39;: 202, &#39;tracks_played&#39;: 333034, &#39;most_active_users&#39;: [{&#39;user_id&#39;: 10, &#39;user_name&#39;: &#39;hds&#39;, &#39;count&#39;: 46885}, {&#39;user_id&#39;: 147, &#39;user_name&#39;: &#39;Groschi&#39;, &#39;count&#39;: 14959}, {&#39;user_id&#39;: 38, &#39;user_name&#39;: &#39;Silent Singer&#39;, &#39;count&#39;: 13005}, {&#39;user_id&#39;: 89, &#39;user_name&#39;: &#39;phdnk&#39;, &#39;count&#39;: 12861}, {&#39;user_id&#39;: 48, &#39;user_name&#39;: &#39;6d6f7274686f6e&#39;, &#39;count&#39;: 11544}, {&#39;user_id&#39;: 46, &#39;user_name&#39;: &#39;reverbel&#39;, &#39;count&#39;: 8398}, {&#39;user_id&#39;: 42, &#39;user_name&#39;: &#39;Cl�psHydra&#39;, &#39;count&#39;: 8318}, {&#39;user_id&#39;: 170, &#39;user_name&#39;: &#39;InvincibleAsia&#39;, &#39;count&#39;: 7804}, {&#39;user_id&#39;: 190, &#39;user_name&#39;: &#39;cimualte&#39;, &#39;count&#39;: 7356}, {&#39;user_id&#39;: 37, &#39;user_name&#39;: &#39;inhji&#39;, &#39;count&#39;: 6349}], &#39;daily_active_user&#39;: [{&#39;date&#39;: &#39;2019-01-01&#39;, &#39;count&#39;: 72}, {&#39;date&#39;: &#39;2019-01-02&#39;, &#39;count&#39;: 78}, {&#39;date&#39;: &#39;2019-01-03&#39;, &#39;count&#39;: 82}, {&#39;date&#39;: &#39;2019-01-04&#39;, &#39;count&#39;: 82}, {&#39;date&#39;: &#39;2019-01-05&#39;, &#39;count&#39;: 71}, {&#39;date&#39;: &#39;2019-01-06&#39;, &#39;count&#39;: 70}, {&#39;date&#39;: &#39;2019-01-07&#39;, &#39;count&#39;: 80}, {&#39;date&#39;: &#39;2019-01-08&#39;, &#39;count&#39;: 80}, {&#39;date&#39;: &#39;2019-01-09&#39;, &#39;count&#39;: 87}, {&#39;date&#39;: &#39;2019-01-10&#39;, &#39;count&#39;: 90}, {&#39;date&#39;: &#39;2019-01-11&#39;, &#39;count&#39;: 82}, {&#39;date&#39;: &#39;2019-01-12&#39;, &#39;count&#39;: 70}, {&#39;date&#39;: &#39;2019-01-13&#39;, &#39;count&#39;: 75}, {&#39;date&#39;: &#39;2019-01-14&#39;, &#39;count&#39;: 96}, {&#39;date&#39;: &#39;2019-01-15&#39;, &#39;count&#39;: 87}, {&#39;date&#39;: &#39;2019-01-16&#39;, &#39;count&#39;: 87}, {&#39;date&#39;: &#39;2019-01-17&#39;, &#39;count&#39;: 88}, {&#39;date&#39;: &#39;2019-01-18&#39;, &#39;count&#39;: 88}, {&#39;date&#39;: &#39;2019-01-19&#39;, &#39;count&#39;: 75}, {&#39;date&#39;: &#39;2019-01-20&#39;, &#39;count&#39;: 63}, {&#39;date&#39;: &#39;2019-01-21&#39;, &#39;count&#39;: 81}, {&#39;date&#39;: &#39;2019-01-22&#39;, &#39;count&#39;: 82}, {&#39;date&#39;: &#39;2019-01-23&#39;, &#39;count&#39;: 87}, {&#39;date&#39;: &#39;2019-01-24&#39;, &#39;count&#39;: 93}, {&#39;date&#39;: &#39;2019-01-25&#39;, &#39;count&#39;: 79}, {&#39;date&#39;: &#39;2019-01-26&#39;, &#39;count&#39;: 66}, {&#39;date&#39;: &#39;2019-01-27&#39;, &#39;count&#39;: 66}, {&#39;date&#39;: &#39;2019-01-28&#39;, &#39;count&#39;: 81}, {&#39;date&#39;: &#39;2019-01-29&#39;, &#39;count&#39;: 73}, {&#39;date&#39;: &#39;2019-01-30&#39;, &#39;count&#39;: 79}, {&#39;date&#39;: &#39;2019-01-31&#39;, &#39;count&#39;: 77}, {&#39;date&#39;: &#39;2019-02-01&#39;, &#39;count&#39;: 80}, {&#39;date&#39;: &#39;2019-02-02&#39;, &#39;count&#39;: 65}, {&#39;date&#39;: &#39;2019-02-03&#39;, &#39;count&#39;: 70}, {&#39;date&#39;: &#39;2019-02-04&#39;, &#39;count&#39;: 83}, {&#39;date&#39;: &#39;2019-02-05&#39;, &#39;count&#39;: 77}, {&#39;date&#39;: &#39;2019-02-06&#39;, &#39;count&#39;: 81}, {&#39;date&#39;: &#39;2019-02-07&#39;, &#39;count&#39;: 70}, {&#39;date&#39;: &#39;2019-02-08&#39;, &#39;count&#39;: 80}, {&#39;date&#39;: &#39;2019-02-09&#39;, &#39;count&#39;: 65}, {&#39;date&#39;: &#39;2019-02-10&#39;, &#39;count&#39;: 64}, {&#39;date&#39;: &#39;2019-02-11&#39;, &#39;count&#39;: 75}, {&#39;date&#39;: &#39;2019-02-12&#39;, &#39;count&#39;: 73}, {&#39;date&#39;: &#39;2019-02-13&#39;, &#39;count&#39;: 71}, {&#39;date&#39;: &#39;2019-02-14&#39;, &#39;count&#39;: 78}, {&#39;date&#39;: &#39;2019-02-15&#39;, &#39;count&#39;: 78}, {&#39;date&#39;: &#39;2019-02-16&#39;, &#39;count&#39;: 73}, {&#39;date&#39;: &#39;2019-02-17&#39;, &#39;count&#39;: 76}, {&#39;date&#39;: &#39;2019-02-18&#39;, &#39;count&#39;: 85}, {&#39;date&#39;: &#39;2019-02-19&#39;, &#39;count&#39;: 80}, {&#39;date&#39;: &#39;2019-02-20&#39;, &#39;count&#39;: 86}, {&#39;date&#39;: &#39;2019-02-21&#39;, &#39;count&#39;: 88}, {&#39;date&#39;: &#39;2019-02-22&#39;, &#39;count&#39;: 79}, {&#39;date&#39;: &#39;2019-02-23&#39;, &#39;count&#39;: 71}, {&#39;date&#39;: &#39;2019-02-24&#39;, &#39;count&#39;: 61}, {&#39;date&#39;: &#39;2019-02-25&#39;, &#39;count&#39;: 68}, {&#39;date&#39;: &#39;2019-02-26&#39;, &#39;count&#39;: 76}, {&#39;date&#39;: &#39;2019-02-27&#39;, &#39;count&#39;: 82}, {&#39;date&#39;: &#39;2019-02-28&#39;, &#39;count&#39;: 80}, {&#39;date&#39;: &#39;2019-03-01&#39;, &#39;count&#39;: 75}, {&#39;date&#39;: &#39;2019-03-02&#39;, &#39;count&#39;: 66}, {&#39;date&#39;: &#39;2019-03-03&#39;, &#39;count&#39;: 61}, {&#39;date&#39;: &#39;2019-03-04&#39;, &#39;count&#39;: 75}, {&#39;date&#39;: &#39;2019-03-05&#39;, &#39;count&#39;: 80}, {&#39;date&#39;: &#39;2019-03-06&#39;, &#39;count&#39;: 76}, {&#39;date&#39;: &#39;2019-03-07&#39;, &#39;count&#39;: 76}, {&#39;date&#39;: &#39;2019-03-08&#39;, &#39;count&#39;: 77}, {&#39;date&#39;: &#39;2019-03-09&#39;, &#39;count&#39;: 61}, {&#39;date&#39;: &#39;2019-03-10&#39;, &#39;count&#39;: 59}, {&#39;date&#39;: &#39;2019-03-11&#39;, &#39;count&#39;: 71}, {&#39;date&#39;: &#39;2019-03-12&#39;, &#39;count&#39;: 75}, {&#39;date&#39;: &#39;2019-03-13&#39;, &#39;count&#39;: 77}, {&#39;date&#39;: &#39;2019-03-14&#39;, &#39;count&#39;: 79}, {&#39;date&#39;: &#39;2019-03-15&#39;, &#39;count&#39;: 72}, {&#39;date&#39;: &#39;2019-03-16&#39;, &#39;count&#39;: 54}, {&#39;date&#39;: &#39;2019-03-17&#39;, &#39;count&#39;: 56}, {&#39;date&#39;: &#39;2019-03-18&#39;, &#39;count&#39;: 67}, {&#39;date&#39;: &#39;2019-03-19&#39;, &#39;count&#39;: 72}, {&#39;date&#39;: &#39;2019-03-20&#39;, &#39;count&#39;: 72}, {&#39;date&#39;: &#39;2019-03-21&#39;, &#39;count&#39;: 71}, {&#39;date&#39;: &#39;2019-03-22&#39;, &#39;count&#39;: 70}, {&#39;date&#39;: &#39;2019-03-23&#39;, &#39;count&#39;: 58}, {&#39;date&#39;: &#39;2019-03-24&#39;, &#39;count&#39;: 55}, {&#39;date&#39;: &#39;2019-03-25&#39;, &#39;count&#39;: 66}, {&#39;date&#39;: &#39;2019-03-26&#39;, &#39;count&#39;: 58}, {&#39;date&#39;: &#39;2019-03-27&#39;, &#39;count&#39;: 68}, {&#39;date&#39;: &#39;2019-03-28&#39;, &#39;count&#39;: 63}, {&#39;date&#39;: &#39;2019-03-29&#39;, &#39;count&#39;: 60}, {&#39;date&#39;: &#39;2019-03-30&#39;, &#39;count&#39;: 40}, {&#39;date&#39;: &#39;2019-03-31&#39;, &#39;count&#39;: 51}, {&#39;date&#39;: &#39;2019-04-01&#39;, &#39;count&#39;: 64}, {&#39;date&#39;: &#39;2019-04-02&#39;, &#39;count&#39;: 63}, {&#39;date&#39;: &#39;2019-04-03&#39;, &#39;count&#39;: 58}, {&#39;date&#39;: &#39;2019-04-04&#39;, &#39;count&#39;: 54}, {&#39;date&#39;: &#39;2019-04-05&#39;, &#39;count&#39;: 56}, {&#39;date&#39;: &#39;2019-04-06&#39;, &#39;count&#39;: 50}, {&#39;date&#39;: &#39;2019-04-07&#39;, &#39;count&#39;: 42}, {&#39;date&#39;: &#39;2019-04-08&#39;, &#39;count&#39;: 48}, {&#39;date&#39;: &#39;2019-04-09&#39;, &#39;count&#39;: 55}, {&#39;date&#39;: &#39;2019-04-10&#39;, &#39;count&#39;: 44}, {&#39;date&#39;: &#39;2019-04-11&#39;, &#39;count&#39;: 42}, {&#39;date&#39;: &#39;2019-04-12&#39;, &#39;count&#39;: 46}, {&#39;date&#39;: &#39;2019-04-13&#39;, &#39;count&#39;: 46}, {&#39;date&#39;: &#39;2019-04-14&#39;, &#39;count&#39;: 38}, {&#39;date&#39;: &#39;2019-04-15&#39;, &#39;count&#39;: 5}], &#39;mean_activity_user&#39;: [{&#39;user_id&#39;: 1, &#39;mean&#39;: 22}, {&#39;user_id&#39;: 2, &#39;mean&#39;: 23}, {&#39;user_id&#39;: 3, &#39;mean&#39;: 19}, {&#39;user_id&#39;: 4, &#39;mean&#39;: 5}, {&#39;user_id&#39;: 5, &#39;mean&#39;: 4}, {&#39;user_id&#39;: 6, &#39;mean&#39;: 21}, {&#39;user_id&#39;: 7, &#39;mean&#39;: 14}, {&#39;user_id&#39;: 8, &#39;mean&#39;: 10}, {&#39;user_id&#39;: 9, &#39;mean&#39;: 20}, {&#39;user_id&#39;: 10, &#39;mean&#39;: 0}, {&#39;user_id&#39;: 11, &#39;mean&#39;: 0}, {&#39;user_id&#39;: 12, &#39;mean&#39;: 18}, {&#39;user_id&#39;: 13, &#39;mean&#39;: 16}, {&#39;user_id&#39;: 14, &#39;mean&#39;: 5}, {&#39;user_id&#39;: 15, &#39;mean&#39;: 8}, {&#39;user_id&#39;: 16, &#39;mean&#39;: 21}, {&#39;user_id&#39;: 17, &#39;mean&#39;: 5}, {&#39;user_id&#39;: 18, &#39;mean&#39;: 18}, {&#39;user_id&#39;: 19, &#39;mean&#39;: 1}, {&#39;user_id&#39;: 20, &#39;mean&#39;: 20}, {&#39;user_id&#39;: 21, &#39;mean&#39;: 3}, {&#39;user_id&#39;: 22, &#39;mean&#39;: 10}, {&#39;user_id&#39;: 23, &#39;mean&#39;: 10}, {&#39;user_id&#39;: 24, &#39;mean&#39;: 20}, {&#39;user_id&#39;: 25, &#39;mean&#39;: 10}, {&#39;user_id&#39;: 26, &#39;mean&#39;: 16}, {&#39;user_id&#39;: 27, &#39;mean&#39;: 18}, {&#39;user_id&#39;: 28, &#39;mean&#39;: 14}, {&#39;user_id&#39;: 29, &#39;mean&#39;: 23}, {&#39;user_id&#39;: 30, &#39;mean&#39;: 11}, {&#39;user_id&#39;: 31, &#39;mean&#39;: 8}, {&#39;user_id&#39;: 32, &#39;mean&#39;: 13}, {&#39;user_id&#39;: 33, &#39;mean&#39;: 5}, {&#39;user_id&#39;: 34, &#39;mean&#39;: 21}, {&#39;user_id&#39;: 35, &#39;mean&#39;: 0}, {&#39;user_id&#39;: 36, &#39;mean&#39;: 22}, {&#39;user_id&#39;: 37, &#39;mean&#39;: 23}, {&#39;user_id&#39;: 38, &#39;mean&#39;: 0}, {&#39;user_id&#39;: 39, &#39;mean&#39;: 21}, {&#39;user_id&#39;: 40, &#39;mean&#39;: 12}, {&#39;user_id&#39;: 41, &#39;mean&#39;: 0}, {&#39;user_id&#39;: 42, &#39;mean&#39;: 22}, {&#39;user_id&#39;: 43, &#39;mean&#39;: 0}, {&#39;user_id&#39;: 44, &#39;mean&#39;: 2}, {&#39;user_id&#39;: 46, &#39;mean&#39;: 23}, {&#39;user_id&#39;: 48, &#39;mean&#39;: 0}, {&#39;user_id&#39;: 49, &#39;mean&#39;: 22}, {&#39;user_id&#39;: 50, &#39;mean&#39;: 23}, {&#39;user_id&#39;: 51, &#39;mean&#39;: 3}, {&#39;user_id&#39;: 53, &#39;mean&#39;: 22}, {&#39;user_id&#39;: 56, &#39;mean&#39;: 12}, {&#39;user_id&#39;: 57, &#39;mean&#39;: 0}, {&#39;user_id&#39;: 59, &#39;mean&#39;: 15}, {&#39;user_id&#39;: 60, &#39;mean&#39;: 22}, {&#39;user_id&#39;: 61, &#39;mean&#39;: 12}, {&#39;user_id&#39;: 62, &#39;mean&#39;: 10}, {&#39;user_id&#39;: 63, &#39;mean&#39;: 0}, {&#39;user_id&#39;: 64, &#39;mean&#39;: 10}, {&#39;user_id&#39;: 65, &#39;mean&#39;: 10}, {&#39;user_id&#39;: 66, &#39;mean&#39;: 20}, {&#39;user_id&#39;: 67, &#39;mean&#39;: 18}, {&#39;user_id&#39;: 68, &#39;mean&#39;: 18}, {&#39;user_id&#39;: 69, &#39;mean&#39;: 17}, {&#39;user_id&#39;: 70, &#39;mean&#39;: 5}, {&#39;user_id&#39;: 71, &#39;mean&#39;: 0}, {&#39;user_id&#39;: 72, &#39;mean&#39;: 14}, {&#39;user_id&#39;: 73, &#39;mean&#39;: 23}, {&#39;user_id&#39;: 74, &#39;mean&#39;: 21}, {&#39;user_id&#39;: 75, &#39;mean&#39;: 20}, {&#39;user_id&#39;: 77, &#39;mean&#39;: 9}, {&#39;user_id&#39;: 78, &#39;mean&#39;: 22}, {&#39;user_id&#39;: 79, &#39;mean&#39;: 17}, {&#39;user_id&#39;: 80, &#39;mean&#39;: 9}, {&#39;user_id&#39;: 81, &#39;mean&#39;: 20}, {&#39;user_id&#39;: 82, &#39;mean&#39;: 15}, {&#39;user_id&#39;: 83, &#39;mean&#39;: 12}, {&#39;user_id&#39;: 84, &#39;mean&#39;: 0}, {&#39;user_id&#39;: 85, &#39;mean&#39;: 16}, {&#39;user_id&#39;: 86, &#39;mean&#39;: 0}, {&#39;user_id&#39;: 88, &#39;mean&#39;: 22}, {&#39;user_id&#39;: 89, &#39;mean&#39;: 19}, {&#39;user_id&#39;: 90, &#39;mean&#39;: 8}, {&#39;user_id&#39;: 91, &#39;mean&#39;: 20}, {&#39;user_id&#39;: 92, &#39;mean&#39;: 6}, {&#39;user_id&#39;: 93, &#39;mean&#39;: 0}, {&#39;user_id&#39;: 94, &#39;mean&#39;: 0}, {&#39;user_id&#39;: 96, &#39;mean&#39;: 13}, {&#39;user_id&#39;: 98, &#39;mean&#39;: 21}, {&#39;user_id&#39;: 99, &#39;mean&#39;: 8}, {&#39;user_id&#39;: 100, &#39;mean&#39;: 0}, {&#39;user_id&#39;: 101, &#39;mean&#39;: 21}, {&#39;user_id&#39;: 102, &#39;mean&#39;: 14}, {&#39;user_id&#39;: 104, &#39;mean&#39;: 22}, {&#39;user_id&#39;: 105, &#39;mean&#39;: 12}, {&#39;user_id&#39;: 106, &#39;mean&#39;: 5}, {&#39;user_id&#39;: 107, &#39;mean&#39;: 0}, {&#39;user_id&#39;: 108, &#39;mean&#39;: 0}, {&#39;user_id&#39;: 109, &#39;mean&#39;: 9}, {&#39;user_id&#39;: 110, &#39;mean&#39;: 16}, {&#39;user_id&#39;: 111, &#39;mean&#39;: 15}, {&#39;user_id&#39;: 112, &#39;mean&#39;: 16}, {&#39;user_id&#39;: 113, &#39;mean&#39;: 18}, {&#39;user_id&#39;: 114, &#39;mean&#39;: 5}, {&#39;user_id&#39;: 115, &#39;mean&#39;: 12}, {&#39;user_id&#39;: 117, &#39;mean&#39;: 0}, {&#39;user_id&#39;: 118, &#39;mean&#39;: 4}, {&#39;user_id&#39;: 120, &#39;mean&#39;: 0}, {&#39;user_id&#39;: 121, &#39;mean&#39;: 6}, {&#39;user_id&#39;: 122, &#39;mean&#39;: 21}, {&#39;user_id&#39;: 124, &#39;mean&#39;: 0}, {&#39;user_id&#39;: 125, &#39;mean&#39;: 13}, {&#39;user_id&#39;: 126, &#39;mean&#39;: 19}, {&#39;user_id&#39;: 128, &#39;mean&#39;: 11}, {&#39;user_id&#39;: 129, &#39;mean&#39;: 13}, {&#39;user_id&#39;: 130, &#39;mean&#39;: 16}, {&#39;user_id&#39;: 131, &#39;mean&#39;: 13}, {&#39;user_id&#39;: 132, &#39;mean&#39;: 0}, {&#39;user_id&#39;: 133, &#39;mean&#39;: 0}, {&#39;user_id&#39;: 134, &#39;mean&#39;: 11}, {&#39;user_id&#39;: 135, &#39;mean&#39;: 0}, {&#39;user_id&#39;: 136, &#39;mean&#39;: 15}, {&#39;user_id&#39;: 137, &#39;mean&#39;: 15}, {&#39;user_id&#39;: 138, &#39;mean&#39;: 21}, {&#39;user_id&#39;: 139, &#39;mean&#39;: 6}, {&#39;user_id&#39;: 140, &#39;mean&#39;: 10}, {&#39;user_id&#39;: 141, &#39;mean&#39;: 9}, {&#39;user_id&#39;: 142, &#39;mean&#39;: 14}, {&#39;user_id&#39;: 143, &#39;mean&#39;: 19}, {&#39;user_id&#39;: 144, &#39;mean&#39;: 12}, {&#39;user_id&#39;: 145, &#39;mean&#39;: 3}, {&#39;user_id&#39;: 146, &#39;mean&#39;: 0}, {&#39;user_id&#39;: 147, &#39;mean&#39;: 0}, {&#39;user_id&#39;: 148, &#39;mean&#39;: 12}, {&#39;user_id&#39;: 149, &#39;mean&#39;: 22}, {&#39;user_id&#39;: 150, &#39;mean&#39;: 19}, {&#39;user_id&#39;: 151, &#39;mean&#39;: 16}, {&#39;user_id&#39;: 152, &#39;mean&#39;: 12}, {&#39;user_id&#39;: 153, &#39;mean&#39;: 16}, {&#39;user_id&#39;: 154, &#39;mean&#39;: 18}, {&#39;user_id&#39;: 155, &#39;mean&#39;: 0}, {&#39;user_id&#39;: 156, &#39;mean&#39;: 21}, {&#39;user_id&#39;: 157, &#39;mean&#39;: 0}, {&#39;user_id&#39;: 159, &#39;mean&#39;: 0}, {&#39;user_id&#39;: 160, &#39;mean&#39;: 21}, {&#39;user_id&#39;: 162, &#39;mean&#39;: 0}, {&#39;user_id&#39;: 163, &#39;mean&#39;: 17}, {&#39;user_id&#39;: 164, &#39;mean&#39;: 14}, {&#39;user_id&#39;: 165, &#39;mean&#39;: 18}, {&#39;user_id&#39;: 166, &#39;mean&#39;: 12}, {&#39;user_id&#39;: 167, &#39;mean&#39;: 9}, {&#39;user_id&#39;: 168, &#39;mean&#39;: 13}, {&#39;user_id&#39;: 169, &#39;mean&#39;: 10}, {&#39;user_id&#39;: 170, &#39;mean&#39;: 22}, {&#39;user_id&#39;: 171, &#39;mean&#39;: 14}, {&#39;user_id&#39;: 172, &#39;mean&#39;: 19}, {&#39;user_id&#39;: 173, &#39;mean&#39;: 17}, {&#39;user_id&#39;: 174, &#39;mean&#39;: 14}, {&#39;user_id&#39;: 175, &#39;mean&#39;: 14}, {&#39;user_id&#39;: 176, &#39;mean&#39;: 13}, {&#39;user_id&#39;: 177, &#39;mean&#39;: 17}, {&#39;user_id&#39;: 178, &#39;mean&#39;: 12}, {&#39;user_id&#39;: 179, &#39;mean&#39;: 17}, {&#39;user_id&#39;: 180, &#39;mean&#39;: 2}, {&#39;user_id&#39;: 181, &#39;mean&#39;: 0}, {&#39;user_id&#39;: 182, &#39;mean&#39;: 9}, {&#39;user_id&#39;: 183, &#39;mean&#39;: 2}, {&#39;user_id&#39;: 184, &#39;mean&#39;: 13}, {&#39;user_id&#39;: 185, &#39;mean&#39;: 16}, {&#39;user_id&#39;: 186, &#39;mean&#39;: 20}, {&#39;user_id&#39;: 187, &#39;mean&#39;: 5}, {&#39;user_id&#39;: 188, &#39;mean&#39;: 18}, {&#39;user_id&#39;: 189, &#39;mean&#39;: 22}, {&#39;user_id&#39;: 190, &#39;mean&#39;: 23}, {&#39;user_id&#39;: 191, &#39;mean&#39;: 0}, {&#39;user_id&#39;: 192, &#39;mean&#39;: 20}, {&#39;user_id&#39;: 194, &#39;mean&#39;: 8}, {&#39;user_id&#39;: 195, &#39;mean&#39;: 16}, {&#39;user_id&#39;: 196, &#39;mean&#39;: 0}, {&#39;user_id&#39;: 197, &#39;mean&#39;: 8}, {&#39;user_id&#39;: 199, &#39;mean&#39;: 9}, {&#39;user_id&#39;: 200, &#39;mean&#39;: 0}, {&#39;user_id&#39;: 201, &#39;mean&#39;: 5}], &#39;most_active_hours&#39;: [{&#39;hour&#39;: 0, &#39;activity&#39;: 1453}, {&#39;hour&#39;: 1, &#39;activity&#39;: 1231}, {&#39;hour&#39;: 2, &#39;activity&#39;: 1124}, {&#39;hour&#39;: 3, &#39;activity&#39;: 1027}, {&#39;hour&#39;: 4, &#39;activity&#39;: 1030}, {&#39;hour&#39;: 5, &#39;activity&#39;: 1053}, {&#39;hour&#39;: 6, &#39;activity&#39;: 1219}, {&#39;hour&#39;: 7, &#39;activity&#39;: 1441}, {&#39;hour&#39;: 8, &#39;activity&#39;: 1569}, {&#39;hour&#39;: 9, &#39;activity&#39;: 1576}, {&#39;hour&#39;: 10, &#39;activity&#39;: 1593}, {&#39;hour&#39;: 11, &#39;activity&#39;: 1764}, {&#39;hour&#39;: 12, &#39;activity&#39;: 1881}, {&#39;hour&#39;: 13, &#39;activity&#39;: 1990}, {&#39;hour&#39;: 14, &#39;activity&#39;: 2137}, {&#39;hour&#39;: 15, &#39;activity&#39;: 2202}, {&#39;hour&#39;: 16, &#39;activity&#39;: 2252}, {&#39;hour&#39;: 17, &#39;activity&#39;: 2167}, {&#39;hour&#39;: 18, &#39;activity&#39;: 2102}, {&#39;hour&#39;: 19, &#39;activity&#39;: 1926}, {&#39;hour&#39;: 20, &#39;activity&#39;: 1823}, {&#39;hour&#39;: 21, &#39;activity&#39;: 1837}, {&#39;hour&#39;: 22, &#39;activity&#39;: 1782}, {&#39;hour&#39;: 23, &#39;activity&#39;: 1681}], &#39;b_reasoning&#39;: &#39;&lt;div&gt; &lt;h4&gt; Reasoning: &lt;/h4&gt; &lt;/br&gt; To see the distribution of artists and tracks on the platform. what tracks are the most liked, what artists are the &lt;/br&gt;most liked. What artists have the most tracks and what percentage of the platform they are taking. Helps to maybe &lt;/br&gt;diversify the offering of the platform and also maybe do special collaborations or exclusives with the artists. &lt;/br&gt;Also encouraging less represented artists that have more tracks to publish them also. &lt;/div&gt;&#39;, &#39;amount_tracks&#39;: 168302, &#39;amount_artists&#39;: 34088, &#39;most_listened_to_tracks&#39;: [{&#39;song&#39;: &#39;Love Within Narcosis&#39;, &#39;count&#39;: 2240}, {&#39;song&#39;: &#39;Love Within Delirium&#39;, &#39;count&#39;: 2232}, {&#39;song&#39;: &#39;Love Within Isolation&#39;, &#39;count&#39;: 2227}, {&#39;song&#39;: &#39;Season In Desperation&#39;, &#39;count&#39;: 2207}, {&#39;song&#39;: &#39;Season In Yonder&#39;, &#39;count&#39;: 2193}, {&#39;song&#39;: &#39;Season In Lust&#39;, &#39;count&#39;: 2191}, {&#39;song&#39;: &#39;Season In Neglection&#39;, &#39;count&#39;: 2191}, {&#39;song&#39;: &#39;Season In Absence&#39;, &#39;count&#39;: 2181}, {&#39;song&#39;: &#39;Love Within Restriction&#39;, &#39;count&#39;: 2161}, {&#39;song&#39;: &#39;Love Within Autumn&#39;, &#39;count&#39;: 2151}], &#39;most_listened_to_artists&#39;: [{&#39;artist_name&#39;: &#39;Vision Éternel&#39;, &#39;count&#39;: 46883}, {&#39;artist_name&#39;: &#39;Two Steps from Hell&#39;, &#39;count&#39;: 1918}, {&#39;artist_name&#39;: &#39;Johann Sebastian Bach&#39;, &#39;count&#39;: 1539}, {&#39;artist_name&#39;: &#39;Radiohead&#39;, &#39;count&#39;: 1117}, {&#39;artist_name&#39;: &#39;BrunuhVille&#39;, &#39;count&#39;: 1009}, {&#39;artist_name&#39;: &#39;Daughters&#39;, &#39;count&#39;: 928}, {&#39;artist_name&#39;: &#34;Anita O&#39;Day&#34;, &#39;count&#39;: 874}, {&#39;artist_name&#39;: &#39;Bob Dylan&#39;, &#39;count&#39;: 870}, {&#39;artist_name&#39;: &#39;Pink Floyd&#39;, &#39;count&#39;: 800}, {&#39;artist_name&#39;: &#39;Bring Me the Horizon&#39;, &#39;count&#39;: 770}], &#39;most_represented_artists&#39;: [{&#39;artist_name&#39;: &#39;Johann Sebastian Bach&#39;, &#39;count&#39;: 619}, {&#39;artist_name&#39;: &#39;Bob Dylan&#39;, &#39;count&#39;: 590}, {&#39;artist_name&#39;: &#39;John Zorn&#39;, &#39;count&#39;: 500}, {&#39;artist_name&#39;: &#39;The Beatles&#39;, &#39;count&#39;: 400}, {&#39;artist_name&#39;: &#39;Pink Floyd&#39;, &#39;count&#39;: 390}, {&#39;artist_name&#39;: &#39;Radiohead&#39;, &#39;count&#39;: 389}, {&#39;artist_name&#39;: &#39;Marilyn Manson&#39;, &#39;count&#39;: 346}, {&#39;artist_name&#39;: &#39;David Bowie&#39;, &#39;count&#39;: 327}, {&#39;artist_name&#39;: &#39;Nine Inch Nails&#39;, &#39;count&#39;: 300}, {&#39;artist_name&#39;: &#39;Boredoms&#39;, &#39;count&#39;: 283}], &#39;other_metrics&#39;: &#34;&lt;div&gt; &lt;h3&gt;What other metrics (that aren&#39;t available in the given dataset) would you like to add to the report? &lt;/br&gt; Prioritize your top 3. &lt;/br&gt; Shortly describe your reasoning for what metrics you picked and why you decided to include them in the report.&lt;/h3&gt; &lt;/div&gt;Metrics I would have also included: &lt;/br&gt;1. Genre of the Tracks and Artists &lt;/br&gt;Reasoning: &lt;/br&gt;Finding out what Genres are the most popular, What is the overal offering of the platform etc. &lt;/br&gt;2. More info about the user like age distribution or gender and location &lt;/br&gt;Reasoning: &lt;/br&gt;General information about the userbase, trend forecasting what age group/userbase will like what songs/genre in future what is trending at the moment etc. &lt;/br&gt;3. Percentage of the Song listened to / Skipped a certain part &lt;/br&gt;Reasoning: &lt;/br&gt;Are there parts of songs that are especially popular and others that are not. Can we find songs with similar patterns to recommend to the users &lt;/br&gt;&lt;/div&gt;&#34;}</p>-->
+</body>
+</html>

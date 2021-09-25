@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Scalable Capital KPIs</title>
+</head>
+<body>
+<script src="https://d3js.org/d3.v5.min.js"></script>
+{{result.kpi_question | safe}}
+{{result.a_reasoning | safe}}
+<h4>Amount of Users</h4>
+<p>{{result.amount_users}}</p>
+<h4>Tracks played</h4>
+<p>{{result.tracks_played}}</p>
+<h4>Most active users</h4>
+<table>
+    <thead>
+    <th>User ID</th>
+    <th>User Name</th>
+    <th>Activity Count</th>
+    </thead>
+    <tbody>
+    {% for row in result.most_active_users %}
+    <tr>
+        <td>{{row.user_id}}</td>
+        <td>{{row.user_name}}</td>
+        <td>{{row.count}}</td>
+    </tr>
+    {% endfor %}
+    </tbody>
+</table>
+<h4>Daily active users</h4>
+<table>
+    <thead>
+    <th>Timestamp</th>
+    <th>Activity</th>
+
+    </thead>
+    <tbody>
+    {% for row in result.daily_active_user %}
+    <tr>
+        <td>{{row.date}}</td>
+        <td>{{row.count}}</td>
+    </tr>
+    {% endfor %}
+    </tbody>
+</table>
+
+<h4>Mean activity frequency of users</h4>
+<table>
+    <thead>
+    <th>User ID</th>
+    <th>Mean Timedelta in hours</th>
+    </thead>
+    <tbody>
+    {% for row in result.mean_activity_user %}
+    <tr>
+        <td>{{row.user_id}}</td>
+        <td>{{row.mean}}</td>
+    </tr>
+    {% endfor %}
+    </tbody>
+</table>
+<!--{{result.mean_activity_user}}-->
+
+<h4>Most active hours of the day</h4>
+<table>
+    <thead>
+    <th>Hour</th>
+    <th>Activity</th>
+
+    </thead>
+    <tbody>
+    {% for row in result.most_active_hours %}
+    <tr>
+        <td>{{row.hour}}</td>
+        <td>{{row.activity}}</td>
+    </tr>
+    {% endfor %}
+    </tbody>
+</table>
+{{result.b_reasoning | safe}}
+<h4>Amount of Tracks</h4>
+{{result.amount_tracks}}
+<h4>Amount of Artists</h4>
+{{result.amount_artists}}
+<h4>Most listened to tracks</h4>
+<table>
+    <thead>
+    <th>Song</th>
+    <th>Times Played</th>
+    </thead>
+    <tbody>
+    {% for row in result.most_listened_to_tracks %}
+    <tr>
+        <td>{{row.song}}</td>
+        <td>{{row.count}}</td>
+    </tr>
+    {% endfor %}
+    </tbody>
+</table>
+<h4>Most listened to artists</h4>
+<table>
+    <thead>
+    <th>Artist</th>
+    <th>Times Played</th>
+    </thead>
+    <tbody>
+    {% for row in result.most_listened_to_artists %}
+    <tr>
+        <td>{{row.artist_name}}</td>
+        <td>{{row.count}}</td>
+    </tr>
+    {% endfor %}
+    </tbody>
+</table>
+<h4>Artists with most tracks</h4>
+<table>
+    <thead>
+    <th>Artist</th>
+    <th># Tracks</th>
+    </thead>
+    <tbody>
+    {% for row in result.most_represented_artists %}
+    <tr>
+        <td>{{row.artist_name}}</td>
+        <td>{{row.count}}</td>
+    </tr>
+    {% endfor %}
+    </tbody>
+</table>
+
+{{result.other_metrics | safe}}
+
+    <!--<p>Result {{result}}</p>-->
+</body>
+</html>

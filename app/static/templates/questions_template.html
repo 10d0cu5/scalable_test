@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Scalable Capital Questions</title>
+</head>
+<body>
+<h3>Who are the 10 most active users?</h3>
+<p>
+    <table>
+        <thead>
+            <th>User ID</th>
+            <th>User Name</th>
+        </thead>
+        <tbody>
+        {% for row in result.q1 %}
+            <tr>
+                <td>{{row.user_id}}</td>
+                <td>{{row.user_name}}</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+</p>
+</p>
+<h3>How many users were active on the 1st of March 2019?</h3>
+<p>{{result.q2}}</p>
+</p>
+<h3>For every user, what was the first song they listened to?</h3>
+<p>
+    <table>
+        <thead>
+            <th>User ID</th>
+            <th>User Name</th>
+            <th>Track ID</th>
+            <th>Track Name</th>
+        </thead>
+        <tbody>
+        {% for row in result.q3 %}
+            <tr>
+                <td>{{row.user_id}}</td>
+                <td>{{row.user_name}}</td>
+                <td>{{row.track_id}}</td>
+                <td>{{row.track_name}}</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+</p>
+</p>
+<h3>What two songs are most often played directly after one another?</h3>
+<p>
+<table>
+        <thead>
+            <th>First Track</th>
+            <th>Second Track</th>
+            <th>Times Played</th>
+        </thead>
+        <tbody>
+        {% for row in result.q4 %}
+            <tr>
+                <td>{{row.first_track}}</td>
+                <td>{{row.second_track}}</td>
+                <td>{{row.times_played}}</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+</p>
+</p>
+<h3>How many users are only listening to songs from Bob Dylan?</h3>
+<p>{{result.q5}}</p>
+</body>
+</html>
